@@ -41,5 +41,3 @@ PACKAGES=(
 '@Fonts'
 )
 LANG=C sudo dnf install "${PACKAGES[@]}"
-
-
