@@ -38,6 +38,7 @@ PACKAGES=(
 'egl-wayland'
 \@'Hardware Support'
 '@Multimedia'
+'@Fonts'
 )
 LANG=C sudo dnf install "${PACKAGES[@]}"
 
