@@ -14,6 +14,7 @@ git clone https://github.com/IndependentTrick/Minimal-Fedora-Plasma-Install.git
 ```
 # Install Plasma
 ```
+cd Minimal-Fedora-Plasma-Install
 ./install.sh
 ```
 
