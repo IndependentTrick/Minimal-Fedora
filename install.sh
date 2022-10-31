@@ -41,3 +41,4 @@ PACKAGES=(
 '@Fonts'
 )
 LANG=C sudo dnf install "${PACKAGES[@]}"
+sudo systemctl set-default graphical.target
