@@ -37,9 +37,9 @@ PACKAGES=(
 \kde-partitionmanager
 \plasma-workspace-wayland
 \egl-wayland
-\@'Hardware Support
-\@Multimedia'
-\@Fonts'
+\@'Hardware Support'
+\@Multimedia
+\@Fonts
 )
 dnf install "${PACKAGES[@]}"
 systemctl set-default graphical.target
