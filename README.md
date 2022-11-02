@@ -22,6 +22,6 @@ git clone https://github.com/IndependentTrick/Minimal-Fedora.git
 # Install DE of Choice
 Substitute DE for choice (gnome or plasma)
 ```
-bash {DE}
+sudo bash {DE}
 ```
 
