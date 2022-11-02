@@ -67,5 +67,5 @@ PACKAGES=(
 \@Multimedia
 \@'Hardware Support'
 )
-LANG=C sudo dnf install "${PACKAGES[@]}"
+dnf install "${PACKAGES[@]}"
 
