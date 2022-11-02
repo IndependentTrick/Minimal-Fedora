@@ -68,4 +68,5 @@ PACKAGES=(
 \@'Hardware Support'
 )
 dnf install "${PACKAGES[@]}"
+systemctl set-default graphical.target
 
