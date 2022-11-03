@@ -122,7 +122,7 @@ while [ "$1" != "" ];
       systemctl set-default graphical.target
     exit 1
     ;;
-    *)echo "Usage: ./$(basename /$0) [OPTIONS...]
+    *)echo "Usage: sudo bash $(basename /$0) [OPTIONS...]
        
        -g
       Installs GNOME
