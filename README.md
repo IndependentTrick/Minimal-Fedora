@@ -12,10 +12,10 @@ Choose Minimal Install and Common NetworkManager Submodules
 ```
 Usage: ./install.sh [OPTIONS...]
        
-       -g
+       -g, --gnome
       Installs GNOME
       
-       -p
+       -p, --plasma
       Installs KDE PLASMA
       
 ```
