@@ -115,9 +115,11 @@ while [ "$1" != "" ];
     case "$1" in
     
     -g | --gnome)dnf install "${GNOME[@]}"
+      systemctl set-default graphical.target
     exit 1
     ;;
     -p | --plasma)dnf install "${PLASMA[@]}"
+      systemctl set-default graphical.target
     exit 1
     ;;
     *)echo "Usage: ./$(basename /$0) [OPTIONS...]
@@ -132,6 +134,5 @@ while [ "$1" != "" ];
     ;;
     
     esac
-    systemctl set-default graphical.target
   done
 
