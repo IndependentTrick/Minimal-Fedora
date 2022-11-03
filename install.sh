@@ -124,10 +124,10 @@ while [ "$1" != "" ];
     ;;
     *)echo "Usage: sudo bash $(basename /$0) [OPTIONS...]
        
-       -g
+       -g, --gnome
       Installs GNOME
       
-       -p
+       -p, --plasma
       Installs KDE PLASMA
       "  
     exit 1
