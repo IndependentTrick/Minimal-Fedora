@@ -10,7 +10,7 @@ Choose Minimal Install and Common NetworkManager Submodules
 # Install DE of Choice
 
 ```
-Usage: ./install.sh [OPTIONS...]
+Usage: sudo bash install.sh [OPTIONS...]
        
        -g, --gnome
       Installs GNOME
