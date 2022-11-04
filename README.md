@@ -1,6 +1,6 @@
 # Goal
 
-Minimal Fedora Install
+Minimal Fedora Install. Tested for only Fedora 37.
 
 # Installation
 
