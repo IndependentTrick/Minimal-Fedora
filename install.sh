@@ -114,20 +114,20 @@ while [ "$1" != "" ];
  do 
     case "$1" in
     
-    -g | --gnome)dnf install "${GNOME[@]}"
+    -g | --gnome | gnome)dnf install "${GNOME[@]}"
       systemctl set-default graphical.target
     exit 1
     ;;
-    -p | --plasma)dnf install "${PLASMA[@]}"
+    -p | --plasma | plasma)dnf install "${PLASMA[@]}"
       systemctl set-default graphical.target
     exit 1
     ;;
     *)echo "Usage: sudo bash $(basename /$0) [OPTIONS...]
        
-       -g, --gnome
+       -g, --gnome, gnome
       Installs GNOME
       
-       -p, --plasma
+       -p, --plasma, plasma
       Installs KDE PLASMA
       "  
     exit 1
