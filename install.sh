@@ -1,3 +1,15 @@
+#MINIMAL PACKAGES FOR BUDGIE
+BUDGIE=(
+\@base-x
+\budgie-desktop
+\gnome-terminal
+\nautilus
+\gnome-text-editor
+\gnome-system-monitor
+\@'Hardware Support'
+\@Fonts
+\@Multimedia
+)
 #MINIMAL PACKAGES FOR GNOME
 GNOME=(
 \@base-x
@@ -113,7 +125,10 @@ PLASMA=(
 while [ "$1" != "" ];
  do 
     case "$1" in
-    
+    -b | --budgie | budgie)dnf install "${BUDGIE[@]}"
+       systemctl set-default graphical.target
+     exit 1
+     ;;
     -g | --gnome | gnome)dnf install "${GNOME[@]}"
       systemctl set-default graphical.target
     exit 1
@@ -123,6 +138,9 @@ while [ "$1" != "" ];
     exit 1
     ;;
     *)echo "Usage: sudo bash $(basename /$0) [OPTIONS...]
+    
+       -b, --budgie, budgie
+      Installs BUDGIE
        
        -g, --gnome, gnome
       Installs GNOME
