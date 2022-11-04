@@ -9,6 +9,15 @@ BUDGIE=(
 \gnome-terminal-nautilus
 \xdg-user-dirs-gtk
 \lightdm-gtk
+\gvfs-afc
+\gvfs-afp
+\gvfs-archive
+\gvfs-goa
+\gvfs-gphoto2
+\gvfs-mtp
+\gvfs-smb
+\evince
+\gnome-disk-utility
 \@'Hardware Support'
 \@Fonts
 \@Multimedia
