@@ -6,6 +6,9 @@ BUDGIE=(
 \nautilus
 \gnome-text-editor
 \gnome-system-monitor
+\gnome-terminal-nautilus
+\xdg-user-dirs-gtk
+\lightdm-gtk
 \@'Hardware Support'
 \@Fonts
 \@Multimedia
