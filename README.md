@@ -11,6 +11,9 @@ Choose Minimal Install and Common NetworkManager Submodules
 
 ```
 Usage: sudo bash install.sh [OPTIONS...]
+    
+       -b, --budgie, budgie
+      Installs BUDGIE
        
        -g, --gnome, gnome
       Installs GNOME
