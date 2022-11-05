@@ -6,7 +6,6 @@ BUDGIE=(
 \nautilus
 \gnome-text-editor
 \gnome-system-monitor
-\gnome-console-nautilus
 \xdg-user-dirs-gtk
 \lightdm-gtk
 \desktop-backgrounds-compat
@@ -52,7 +51,6 @@ GNOME=(
 \gnome-logs
 \gnome-remote-desktop
 \gnome-system-monitor
-\gnome-console-nautilus
 \gnome-themes-extra
 \gnome-user-share
 \gnome-weather
