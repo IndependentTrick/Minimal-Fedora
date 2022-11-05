@@ -8,8 +8,7 @@ BUDGIE=(
 \gnome-system-monitor
 \gnome-terminal-nautilus
 \xdg-user-dirs-gtk
-\sddm
-\sddm-breeze
+\lightdm
 \gvfs-afc
 \gvfs-afp
 \gvfs-archive
