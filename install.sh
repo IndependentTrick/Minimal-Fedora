@@ -138,11 +138,20 @@ PLASMA=(
 WAYFIRE-GTK=(
 wayfire
 xorg-11-server-Xwayland
+
 wapanel
 gnome-text-editor
 gnome-disk-utility
 nautilus
 gnome-console
+\gvfs-afc
+\gvfs-afp
+\gvfs-archive
+\gvfs-goa
+\gvfs-gphoto2
+\gvfs-mtp
+\gvfs-smb
+\xdg-user-dirs-gtk
 #LightDM has problems with Wayland.
 materia-kde-sddm
 @Multimedia
@@ -150,14 +159,17 @@ materia-kde-sddm
 )
 #Packages for Wayfire with a minimal amount of KDE apps
 WAYFIRE-QT=(
-wayfire
-xorg-x11-server-Xwayland
-wapanel
-kwrite
-kde-partitionmanager
-dolphin
-konsole
-materia-kde-sddm
+\wayfire
+\xorg-x11-server-Xwayland
+\wapanel
+\kwrite
+\kde-partitionmanager
+\dolphin
+\ark
+\konsole
+\materia-kde-sddm
+\@Multimedia
+\@'Hardware Support'
 )
 
 while [ "$1" != "" ];
@@ -175,15 +187,19 @@ while [ "$1" != "" ];
       systemctl set-default graphical.target
     exit 1
     ;;
-    -wg | --wayfire-gtk | wayfire-gtk)dnf install "${WAYFIRE-GTK[@]}
+    -wg | --wayfire-gtk | wayfire-gtk)dnf install "${WAYFIRE-GTK[@]}"
       mv $PWD/wayfire.ini -t $HOME/.config/
       mv $PWD/wf-shell.ini -t $HOME/.config/
+      mkdir $HOME/.config/wapanel
+      mv $PWD/wayfire-gtk/wapanel.toml -t $HOME/.config/wapanel
       systemctl set-default graphical.target
       exit 1
       ;;
-         -wq | --wayfire-qt| wayfire-qt)dnf install "${WAYFIRE-QT[@]}
+         -wq | --wayfire-qt| wayfire-qt)dnf install "${WAYFIRE-QT[@]}"
       mv $PWD/wayfire.ini -t $HOME/.config/
       mv $PWD/wf-shell.ini -t $HOME/.config/
+      mkdir $HOME/.config/wapanel
+      mv $PWD/wayfire-qt/wapanel.toml -t $HOME/.config/wapanel
       systemctl set-default graphical.target
       exit 1
       ;;
