@@ -7,7 +7,8 @@ BUDGIE=(
 \gnome-text-editor
 \gnome-system-monitor
 \xdg-user-dirs-gtk
-\lightdm-gtk
+#Normal SDDM will have touchscreen keyboard pop up.
+\materia-kde-sddm
 \desktop-backgrounds-compat
 \gvfs-afc
 \gvfs-afp
