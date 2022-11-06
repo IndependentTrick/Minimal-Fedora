@@ -143,6 +143,8 @@ gnome-text-editor
 gnome-disk-utility
 nautilus
 gnome-console
+#LightDM has problems with Wayland.
+materia-kde-sddm
 )
 #Packages for Wayfire with a minimal amount of KDE apps
 WAYFIRE-QT=(
@@ -153,6 +155,7 @@ kwrite
 kde-partitionmanager
 dolphin
 konsole
+materia-kde-sddm
 )
 
 while [ "$1" != "" ];
