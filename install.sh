@@ -135,7 +135,7 @@ PLASMA=(
 \@Fonts
 )
 #Packages for Wayfire with a minimal amount of GNOME apps.
-WAYFIRE-GTK=(
+WAYFIRE_GTK=(
 \wayfire
 \xorg-11-server-Xwayland
 \xdg-desktop-portal-wlr
@@ -158,7 +158,7 @@ materia-kde-sddm
 @'Hardware Support'
 )
 #Packages for Wayfire with a minimal amount of KDE apps
-WAYFIRE-QT=(
+WAYFIRE_QT=(
 \wayfire
 \xorg-x11-server-Xwayland
 \xdg-desktop-portal-wlr
@@ -188,7 +188,7 @@ while [ "$1" != "" ];
       systemctl set-default graphical.target
     exit 1
     ;;
-    -wg | --wayfire-gtk | wayfire-gtk)dnf install "${WAYFIRE-GTK[@]}"
+    -wg | --wayfire-gtk | wayfire-gtk)dnf install "${WAYFIRE_GTK[@]}"
       mv $PWD/wayfire.ini -t $HOME/.config/
       mv $PWD/wf-shell.ini -t $HOME/.config/
       mkdir $HOME/.config/wapanel
@@ -196,7 +196,7 @@ while [ "$1" != "" ];
       systemctl set-default graphical.target
       exit 1
       ;;
-         -wq | --wayfire-qt| wayfire-qt)dnf install "${WAYFIRE-QT[@]}"
+         -wq | --wayfire-qt| wayfire-qt)dnf install "${WAYFIRE_QT[@]}"
       mv $PWD/wayfire.ini -t $HOME/.config/
       mv $PWD/wf-shell.ini -t $HOME/.config/
       mkdir $HOME/.config/wapanel
