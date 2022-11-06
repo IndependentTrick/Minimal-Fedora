@@ -137,7 +137,7 @@ PLASMA=(
 #Packages for Wayfire with a minimal amount of GNOME apps.
 WAYFIRE_GTK=(
 \wayfire
-\xorg-11-server-Xwayland
+\xorg-x11-server-Xwayland
 \xdg-desktop-portal-wlr
 \wapanel
 \gnome-text-editor
