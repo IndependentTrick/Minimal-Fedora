@@ -134,6 +134,27 @@ PLASMA=(
 \@Multimedia
 \@Fonts
 )
+#Packages for Wayfire with a minimal amount of GNOME apps.
+WAYFIRE-GTK=(
+wayfire
+xorg-11-server-Xwayland
+wapanel
+gnome-text-editor
+gnome-disk-utility
+nautilus
+gnome-console
+)
+#Packages for Wayfire with a minimal amount of KDE apps
+WAYFIRE-QT=(
+wayfire
+xorg-x11-server-Xwayland
+wapanel
+kwrite
+kde-partitionmanager
+dolphin
+konsole
+)
+
 while [ "$1" != "" ];
  do 
     case "$1" in
