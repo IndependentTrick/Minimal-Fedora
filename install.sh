@@ -145,6 +145,8 @@ nautilus
 gnome-console
 #LightDM has problems with Wayland.
 materia-kde-sddm
+@Multimedia
+@'Hardware Support'
 )
 #Packages for Wayfire with a minimal amount of KDE apps
 WAYFIRE-QT=(
@@ -173,16 +175,34 @@ while [ "$1" != "" ];
       systemctl set-default graphical.target
     exit 1
     ;;
+    -wg | --wayfire-gtk | wayfire-gtk)dnf install "${WAYFIRE-GTK[@]}
+      mv $PWD/wayfire.ini -t $HOME/.config/
+      mv $PWD/wf-shell.ini -t $HOME/.config/
+      systemctl set-default graphical.target
+      exit 1
+      ;;
+         -wq | --wayfire-qt| wayfire-qt)dnf install "${WAYFIRE-QT[@]}
+      mv $PWD/wayfire.ini -t $HOME/.config/
+      mv $PWD/wf-shell.ini -t $HOME/.config/
+      systemctl set-default graphical.target
+      exit 1
+      ;;
     *)echo "Usage: sudo bash $(basename /$0) [OPTIONS...]
     
        -b, --budgie, budgie
-      Installs BUDGIE
+      Installs Budgie
        
        -g, --gnome, gnome
       Installs GNOME
       
        -p, --plasma, plasma
-      Installs KDE PLASMA
+      Installs KDE Plasma
+      
+       -wg, --wayfire-gtk, wayfire-gtk
+      Installs Wayfire with some GNOME apps
+      
+        -wq, --wayfire-qt, wayfire-qt
+      Installs Wayfire with some KDE Plasma apps.
       "  
     exit 1
     ;;
