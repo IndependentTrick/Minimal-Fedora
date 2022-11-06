@@ -136,14 +136,14 @@ PLASMA=(
 )
 #Packages for Wayfire with a minimal amount of GNOME apps.
 WAYFIRE-GTK=(
-wayfire
-xorg-11-server-Xwayland
-
-wapanel
-gnome-text-editor
-gnome-disk-utility
-nautilus
-gnome-console
+\wayfire
+\xorg-11-server-Xwayland
+\xdg-desktop-portal-wlr
+\wapanel
+\gnome-text-editor
+\gnome-disk-utility
+\nautilus
+\gnome-console
 \gvfs-afc
 \gvfs-afp
 \gvfs-archive
@@ -161,6 +161,7 @@ materia-kde-sddm
 WAYFIRE-QT=(
 \wayfire
 \xorg-x11-server-Xwayland
+\xdg-desktop-portal-wlr
 \wapanel
 \kwrite
 \kde-partitionmanager
