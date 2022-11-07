@@ -1,3 +1,7 @@
+if (( $EUID == 0 )); then
+    echo "Please do not run as root"
+    exit
+fi
 #MINIMAL PACKAGES FOR BUDGIE
 BUDGIE=(
 \@base-x
@@ -176,32 +180,32 @@ WAYFIRE_QT=(
 while [ "$1" != "" ];
  do 
     case "$1" in
-    -b | --budgie | budgie)dnf install "${BUDGIE[@]}"
-       systemctl set-default graphical.target
+    -b | --budgie | budgie)sudo dnf install "${BUDGIE[@]}"
+       sudo systemctl set-default graphical.target
      exit 1
      ;;
-    -g | --gnome | gnome)dnf install "${GNOME[@]}"
-      systemctl set-default graphical.target
+    -g | --gnome | gnome)sudo dnf install "${GNOME[@]}"
+      sudo systemctl set-default graphical.target
     exit 1
     ;;
-    -p | --plasma | plasma)dnf install "${PLASMA[@]}"
-      systemctl set-default graphical.target
+    -p | --plasma | plasma)sudo dnf install "${PLASMA[@]}"
+     sudo systemctl set-default graphical.target
     exit 1
     ;;
-    -wg | --wayfire-gtk | wayfire-gtk)dnf install "${WAYFIRE_GTK[@]}"
+    -wg | --wayfire-gtk | wayfire-gtk)sudo dnf install "${WAYFIRE_GTK[@]}"
       mv $PWD/wayfire.ini -t $HOME/.config/
       mv $PWD/wf-shell.ini -t $HOME/.config/
       mkdir $HOME/.config/wapanel
       mv $PWD/wayfire-gtk/wapanel.toml -t $HOME/.config/wapanel
-      systemctl set-default graphical.target
+      sudo systemctl set-default graphical.target
       exit 1
       ;;
-         -wq | --wayfire-qt| wayfire-qt)dnf install "${WAYFIRE_QT[@]}"
+         -wq | --wayfire-qt| wayfire-qt)sudo dnf install "${WAYFIRE_QT[@]}"
       mv $PWD/wayfire.ini -t $HOME/.config/
       mv $PWD/wf-shell.ini -t $HOME/.config/
       mkdir $HOME/.config/wapanel
       mv $PWD/wayfire-qt/wapanel.toml -t $HOME/.config/wapanel
-      systemctl set-default graphical.target
+      sudo systemctl set-default graphical.target
       exit 1
       ;;
     *)echo "Usage: sudo bash $(basename /$0) [OPTIONS...]
@@ -218,7 +222,7 @@ while [ "$1" != "" ];
        -wg, --wayfire-gtk, wayfire-gtk
       Installs Wayfire with some GNOME apps
       
-        -wq, --wayfire-qt, wayfire-qt
+       -wq, --wayfire-qt, wayfire-qt
       Installs Wayfire with some KDE Plasma apps.
       "  
     exit 1
