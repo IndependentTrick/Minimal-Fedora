@@ -210,7 +210,7 @@ while [ "$1" != "" ];
       sudo systemctl set-default graphical.target
       exit 1
       ;;
-    *)echo "Usage: sudo bash $(basename /$0) [OPTIONS...]
+    *)echo "Usage: bash $(basename /$0) [OPTIONS...]
     
        -b, --budgie, budgie
       Installs Budgie
