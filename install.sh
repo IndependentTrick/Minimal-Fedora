@@ -195,6 +195,7 @@ while [ "$1" != "" ];
     exit 1
     ;;
     -wg | --wayfire-gtk | wayfire-gtk)sudo dnf install "${WAYFIRE_GTK[@]}"
+      xdg-user-dirs-update
       mv $PWD/wayfire.ini -t $HOME/.config/
       mv $PWD/wf-shell.ini -t $HOME/.config/
       mkdir $HOME/.config/wapanel
@@ -203,6 +204,7 @@ while [ "$1" != "" ];
       exit 1
       ;;
          -wq | --wayfire-qt| wayfire-qt)sudo dnf install "${WAYFIRE_QT[@]}"
+      xdg-user-dirs-update
       mv $PWD/wayfire.ini -t $HOME/.config/
       mv $PWD/wf-shell.ini -t $HOME/.config/
       mkdir $HOME/.config/wapanel
