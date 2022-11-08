@@ -10,16 +10,22 @@ Choose Minimal Install and Common NetworkManager Submodules
 # Install DE of Choice
 
 ```
-Usage: sudo bash install.sh [OPTIONS...]
+Usage: bash install.sh [OPTIONS...]
     
        -b, --budgie, budgie
-      Installs BUDGIE
+      Installs Budgie
        
        -g, --gnome, gnome
       Installs GNOME
       
        -p, --plasma, plasma
-      Installs KDE PLASMA
+      Installs KDE Plasma
       
+       -wg, --wayfire-gtk, wayfire-gtk
+      Installs Wayfire with some GNOME apps
+      
+       -wq, --wayfire-qt, wayfire-qt
+      Installs Wayfire with some KDE Plasma apps.
+
 ```
 
