@@ -196,19 +196,19 @@ while [ "$1" != "" ];
     ;;
     -wg | --wayfire-gtk | wayfire-gtk)sudo dnf install "${WAYFIRE_GTK[@]}"
       xdg-user-dirs-update
-      mv $PWD/wayfire.ini -t $HOME/.config/
-      mv $PWD/wf-shell.ini -t $HOME/.config/
+      cp -r $PWD/wayfire.ini -t $HOME/.config/
+      cp -r $PWD/wf-shell.ini -t $HOME/.config/
       mkdir $HOME/.config/wapanel
-      mv $PWD/wayfire-gtk/wapanel.toml -t $HOME/.config/wapanel
+      cp -r $PWD/wayfire-gtk/wapanel.toml -t $HOME/.config/wapanel
       sudo systemctl set-default graphical.target
       exit 1
       ;;
          -wq | --wayfire-qt| wayfire-qt)sudo dnf install "${WAYFIRE_QT[@]}"
       xdg-user-dirs-update
-      mv $PWD/wayfire.ini -t $HOME/.config/
-      mv $PWD/wf-shell.ini -t $HOME/.config/
+      cp -r $PWD/wayfire.ini -t $HOME/.config/
+      cp -r $PWD/wf-shell.ini -t $HOME/.config/
       mkdir $HOME/.config/wapanel
-      mv $PWD/wayfire-qt/wapanel.toml -t $HOME/.config/wapanel
+      cp -r $PWD/wayfire-qt/wapanel.toml -t $HOME/.config/wapanel
       sudo systemctl set-default graphical.target
       exit 1
       ;;
