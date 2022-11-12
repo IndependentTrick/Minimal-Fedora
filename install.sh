@@ -31,6 +31,7 @@ BUDGIE=(
 )
 #MINIMAL PACKAGES FOR GNOME
 GNOME=(
+\fedora-workstation-repositories
 \@base-x
 \gdm
 \gnome-connections
