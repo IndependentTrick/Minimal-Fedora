@@ -48,6 +48,7 @@ GNOME=(
 \fprintd-pam
 \glib-networking
 \desktop-backgrounds-gnome
+\gnome-backgrounds
 \gnome-bluetooth
 \gnome-browser-connector
 \gnome-characters
