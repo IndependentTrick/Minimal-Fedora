@@ -161,9 +161,9 @@ WAYFIRE_GTK=(
 \gvfs-smb
 \xdg-user-dirs-gtk
 #LightDM has problems with Wayland.
-materia-kde-sddm
-@Multimedia
-@'Hardware Support'
+\materia-kde-sddm
+\@Multimedia
+\@'Hardware Support'
 )
 #Packages for Wayfire with a minimal amount of KDE apps
 WAYFIRE_QT=(
