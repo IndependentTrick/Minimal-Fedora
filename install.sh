@@ -184,14 +184,17 @@ while [ "$1" != "" ];
     case "$1" in
     -b | --budgie | budgie)sudo dnf install "${BUDGIE[@]}"
        sudo systemctl set-default graphical.target
+       sudo dracut --force
      exit 1
      ;;
     -g | --gnome | gnome)sudo dnf install "${GNOME[@]}"
       sudo systemctl set-default graphical.target
+      sudo dracut --force
     exit 1
     ;;
     -p | --plasma | plasma)sudo dnf install "${PLASMA[@]}"
      sudo systemctl set-default graphical.target
+     sudo dracut --force
     exit 1
     ;;
     -wg | --wayfire-gtk | wayfire-gtk)sudo dnf install "${WAYFIRE_GTK[@]}"
@@ -201,6 +204,7 @@ while [ "$1" != "" ];
       mkdir $HOME/.config/wapanel
       cp -r $PWD/wayfire-gtk/wapanel.toml -t $HOME/.config/wapanel
       sudo systemctl set-default graphical.target
+      sudo dracut --force
       exit 1
       ;;
          -wq | --wayfire-qt| wayfire-qt)sudo dnf install "${WAYFIRE_QT[@]}"
@@ -210,6 +214,7 @@ while [ "$1" != "" ];
       mkdir $HOME/.config/wapanel
       cp -r $PWD/wayfire-qt/wapanel.toml -t $HOME/.config/wapanel
       sudo systemctl set-default graphical.target
+      sudo dracut --force
       exit 1
       ;;
     *)echo "Usage: bash $(basename /$0) [OPTIONS...]
